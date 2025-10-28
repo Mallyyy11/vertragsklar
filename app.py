@@ -1,20 +1,11 @@
 import streamlit as st
 from analyze_contract import analyze_contract
 
-st.set_page_config(
-    page_title="Vertragsklar",
-    page_icon="📄",
-)
+st.set_page_config(page_title="Vertragsklar", page_icon="📄")
 
 st.title("📄 Vertragsklar")
-st.subheader("Verträge verstehen – ohne Juristendeutsch")
-
-st.markdown("""
-Füge unten den Text deines Vertrags ein (z. B. Dienstleistungsvertrag, NDA, Angebot, AGB).
-Du bekommst eine leicht verständliche Zusammenfassung mit Risiken, Fristen und Pflichten.
-
-**Wichtig:** Das ist keine Rechtsberatung. Du bekommst eine sprachliche Erklärung.
-""")
+st.markdown("### Dein smarter Vertrags-Erklärer 🧠💬")
+st.markdown("Verstehe Verträge einfach — klar, strukturiert und ohne Juristendeutsch.")
 
 # Eingabefeld für Vertragstext
 contract_input = st.text_area(
@@ -37,3 +28,4 @@ if analyze_button:
 
         st.markdown("---")
         st.caption("⚠️ Hinweis: Dies ist keine Rechtsberatung, sondern nur eine sprachliche Zusammenfassung deines Vertragstextes.")
+        st.caption("© 2025 Vertragsklar – KI-Verständnis für deine Verträge.")
