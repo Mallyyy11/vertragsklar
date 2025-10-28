@@ -1,12 +1,20 @@
+import os
 from openai import OpenAI
 from dotenv import load_dotenv
-import os
-from textwrap import dedent
 
-# Lädt den API-Key aus .env und baut den Client
+# Lokal: .env laden (in Streamlit wird das einfach ignoriert)
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+# API-Key holen (funktioniert lokal + auf Streamlit Cloud)
+api_key = os.getenv("OPENAI_API_KEY")
+
+if not api_key:
+    raise RuntimeError(
+        "Kein OPENAI_API_KEY gefunden. Bitte lokal in .env setzen oder auf Streamlit unter Settings → Secrets eintragen."
+    )
+
+# OpenAI-Client initialisieren
+client = OpenAI(api_key=api_key)
 def analyze_contract(contract_text: str) -> str:
     """
     Nimmt den Inhalt eines Vertrags (als Text) und gibt eine leicht verständliche,
