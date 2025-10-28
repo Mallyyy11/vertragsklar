@@ -8,6 +8,11 @@ st.set_page_config(page_title="Vertragsklar", page_icon="📄")
 st.title("📄 Vertragsklar")
 st.markdown("### Dein smarter Vertrags-Erklärer 🧠💬")
 st.markdown("Verstehe Verträge einfach — klar, strukturiert und ohne Juristendeutsch.")
+st.info(
+    "🔒 Wir speichern deine hochgeladenen Vertragsdokumente nicht dauerhaft.\n\n"
+    "⚠️ Hinweis: Das ist keine Rechtsberatung, sondern eine sprachliche Zusammenfassung deines Vertragstextes.",
+    icon="ℹ️"
+)
 
 st.markdown("""
 **Was du hier machen kannst:**
