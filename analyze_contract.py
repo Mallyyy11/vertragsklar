@@ -1,6 +1,8 @@
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
+from textwrap import dedent
+
 
 # Lokal: .env laden (in Streamlit wird das einfach ignoriert)
 load_dotenv()
