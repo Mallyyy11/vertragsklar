@@ -36,4 +36,4 @@ if analyze_button:
         st.write(result)
 
         st.markdown("---")
-        st.caption("Hinweis: Dies ist keine Rechts- oder Steuerberatung.")
+        st.caption("⚠️ Hinweis: Dies ist keine Rechtsberatung, sondern nur eine sprachliche Zusammenfassung deines Vertragstextes.")
